@@ -1,0 +1,106 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #cbd5f5;
+  --heading: #ffffff;
+  --border: #1f2937;
+  --accent: #22c55e;
+  --accent2: #06b6d4;
+  --code-bg: #020617;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  --font-main: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  font-family: var(--font-main);
+  font-size: 17px;
+  color: var(--text);
+  background: linear-gradient(135deg, #0f172a, #020617);
+}
+
+/* Layout */
+body {
+  margin: 0;
+}
+
+#root {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+h1 {
+  font-size: 52px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 22px;
+  color: var(--heading);
+  margin-bottom: 8px;
+}
+
+/* Text */
+p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Code */
+code {
+  background: var(--code-bg);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent);
+}
+
+/* Card Style */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 34px;
+  }
+}
